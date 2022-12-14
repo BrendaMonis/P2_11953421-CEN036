@@ -71,3 +71,10 @@ print(dict_seq)
 
 ##Primeiro precisa trocar a letra T pela U caso seja necessário
 dict_rna = dict_seq.replace('T','U')
+##Em seguida delimitar o início e o fim
+new_seq1 = found=re.search(r"AUG.*U[AG][AG]",dict_seq[0])
+new_seq2 = found=re.search(r"AUG.*U[AG][AG]",dict_seq[1])
+new_seq3 = found=re.search(r"AUG.*U[AG][AG]",dict_seq[2])
+new_seq4 = found=re.search(r"AUG.*U[AG][AG]",dict_seq[3])
+new_seq5 = found=re.search(r"AUG.*U[AG][AG]",dict_seq[4])
+new_seq6 = found=re.search(r"AUG.*U[AG][AG]",dict_seq[5])
