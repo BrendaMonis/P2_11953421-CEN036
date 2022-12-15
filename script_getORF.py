@@ -83,13 +83,42 @@ for gene in dict_seq:
 ##Em seguida delimitar o início e o fim
 import re
 
-new_seq1 = re.search(r"AUG.*U[AG][AG]",rna[0])
-new_seq2 = re.search(r"AUG.*U[AG][AG]",rna[1])
-new_seq3 = re.search(r"AUG.*U[AG][AG]",rna[2])
-new_seq4 = re.search(r"AUG.*U[AG][AG]",rna[3])
-new_seq5 = re.search(r"AUG.*U[AG][AG]",rna[4])
-new_seq6 = re.search(r"AUG.*U[AG][AG]",rna[5])
+new_seq1 = re.search(r"AUG(.{3})*U[AG][AG]",rna[rna[0]])
+new_seq2 = re.search(r"AUG(.{3})*U[AG][AG]",rna[rna[1]])
+new_seq3 = re.search(r"AUG(.{3})*U[AG][AG]",rna[rna[2]])
+new_seq4 = re.search(r"AUG(.{3})*U[AG][AG]",rna[rna[3]])
+new_seq5 = re.search(r"AUG(.{3})*U[AG][AG]",rna[rna[4]])
+new_seq6 = re.search(r"AUG(.{3})*U[AG][AG]",rna[rna[5]])
 #OBS: Foi pensado em um códio capaz de localizar o início e o fim das 6 fases de leitura possíveis, conforme pedido no enunciado
 
-print('sequência 1', new_seq1)
+# Após obter as novas sequências com início em AUG e fim em UAA, UAG ou UGA, será medido o seu comprimento
+comp_seq1 = len(new_seq1)
+comp_seq2 = len(new_seq2)
+comp_seq3 = len(new_seq3)
+comp_seq4 = len(new_seq4)
+comp_seq5 = len(new_seq5)
+comp_seq6 = len(new_seq6)
+
+Print('Os comprimentos das sequências 1,2,3,4,5 e 6 são:', comp_seq1, ',',com_seq2, ',',com_seq3, ',',
+com_seq4, ',', com_seq5, 'e', com_seq6, ',respectivamente.')
+
+# Em seguida, deve-se verificar se são múltiplos de 3
+
+mult3_1 = float((comp_seq1)/3)
+print(mult3_1)
+
+mult3_2 = float((comp_seq2)/3)
+print(mult3_2)
+
+mult3_3 = float((comp_seq3)/3)
+print(mult3_3)
+
+mult3_4 = float((comp_seq4)/3)
+print(mult3_4)
+
+mult3_5 = float((comp_seq5)/3)
+print(mult3_5)
+
+mult3_6 = float((comp_seq6)/3)
+print(mult3_6)
 
