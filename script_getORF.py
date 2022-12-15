@@ -35,11 +35,11 @@ string_seq = ''
 dict_seq = {}
 
 for line in arquivo_fasta_ex:                   ## Fazer um loop no arquivo com o objetivo de deixar apenas a sequência de nucleotídeos
-    line = line.rstrip()                        ## O lado direito com espaço em branco passa a ser um novo caracter
+        line = line.rstrip()                    ## O lado direito com espaço em branco passa a ser um novo caracter
 
         if line.startswith('>'):
-        line = line.lstrip('>')                 ## Remove o caracter de >
-        info_seq = line.split(maxsplit=1)       ## Divide apenas no primeiro espaço
+                line = line.lstrip('>')                 ## Remove o caracter de >
+                info_seq = line.split(maxsplit=1)       ## Divide apenas no primeiro espaço
 
                 if len(info_seq) > 1:
                         desc_seq = info_seq[1]
@@ -51,20 +51,20 @@ for line in arquivo_fasta_ex:                   ## Fazer um loop no arquivo com 
                         dict_seq[nome_seq] = string_seq
                         string_seq = ''
 
-        nome_seq = info_seq[0]
+                nome_seq = info_seq[0]
 
-        if len(info_seq) > 1:
-                          desc_seq = info_seq[1]
+                if len(info_seq) > 1:
+                        desc_seq = info_seq[1]
+                else:
+                        desc_seq = ''
         else:
-                desc_seq = ''
+                string_seq += line
 
-    else:
-        string_seq += line
 
 if len(string_seq) > 0:
         dict_seq[nome_seq] = string_seq  ## Transforma o arquivo fasta em um dicionário
 
-print(dict_seq)
+print(dict_seq) #Visualizando o dicionário
 ## Para verificar o funcionamento do script pode utilizar o arquivo: arquivo.fasta.2.txt
 
 # Após retirar os espaços, sinal de maior e transformar o arquivo em um dicionário, é preciso delimitar o início e fim de cada sequência.
