@@ -69,12 +69,27 @@ print(dict_seq) #Visualizando o dicionário
 
 # Após retirar os espaços, sinal de maior e transformar o arquivo em um dicionário, é preciso delimitar o início e fim de cada sequência.
 
-##Primeiro precisa trocar a letra T pela U caso seja necessário
-dict_rna = dict_seq.replace('T','U')
+##Primeiramente, precisa trocar a letra T pela U caso seja necessário
+
+dict_seq[nome_seq] = string_seq
+dna = {}
+rna = {}
+
+for gene in dict_seq:
+        dna = dict_seq[gene]
+        rna = dna.replace('T','U')
+        print(rna)
+
 ##Em seguida delimitar o início e o fim
-new_seq1 = found=re.search(r"AUG.*U[AG][AG]",dict_seq[0])
-new_seq2 = found=re.search(r"AUG.*U[AG][AG]",dict_seq[1])
-new_seq3 = found=re.search(r"AUG.*U[AG][AG]",dict_seq[2])
-new_seq4 = found=re.search(r"AUG.*U[AG][AG]",dict_seq[3])
-new_seq5 = found=re.search(r"AUG.*U[AG][AG]",dict_seq[4])
-new_seq6 = found=re.search(r"AUG.*U[AG][AG]",dict_seq[5])
+import re
+
+new_seq1 = re.search(r"AUG.*U[AG][AG]",rna[0])
+new_seq2 = re.search(r"AUG.*U[AG][AG]",rna[1])
+new_seq3 = re.search(r"AUG.*U[AG][AG]",rna[2])
+new_seq4 = re.search(r"AUG.*U[AG][AG]",rna[3])
+new_seq5 = re.search(r"AUG.*U[AG][AG]",rna[4])
+new_seq6 = re.search(r"AUG.*U[AG][AG]",rna[5])
+#OBS: Foi pensado em um códio capaz de localizar o início e o fim das 6 fases de leitura possíveis, conforme pedido no enunciado
+
+print('sequência 1', new_seq1)
+
