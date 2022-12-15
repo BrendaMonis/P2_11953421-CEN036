@@ -122,3 +122,5 @@ print(mult3_5)
 mult3_6 = float((comp_seq6)/3)
 print(mult3_6)
 
+# c. Utilizar o ORF mais comprido identificado e gerar o peptídeo codificado
+##OBS: como no exemplo utilizado (arquivo.fasta.2.txt) obteve-se que a sequência 4 possui maior comprimento será utilizado ela
