@@ -124,3 +124,114 @@ print(mult3_6)
 
 # c. Utilizar o ORF mais comprido identificado e gerar o peptídeo codificado
 ##OBS: como no exemplo utilizado (arquivo.fasta.2.txt) obteve-se que a sequência 4 possui maior comprimento será utilizado ela
+
+count = 0
+trinca = 0
+while count <= 60
+        count= trinca
+                if new_seq4 == re.search(r"UU[UC](.{3})"):
+                        print('A trinca é uma fenilalanina')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"UU[AG](.{3})"):
+                        print('A trinca é uma leucina')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"CU[UCAG](.{3})"):
+                        print('A trinca é uma leucina')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"AU[UCA](.{3})"):
+                        print('A trinca é uma isoleucina')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"AUG(.{3})"):
+                        print('A trinca é uma metionina')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"GU[UCAG](.{3})"):
+                        print('A trinca é uma valina')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"UC[UCAG](.{3})"):
+                        print('A trinca é uma serina')
+                        trinca = trinca + 3
+                        count = trinca
+                        elif new_seq4 == re.search(r"CC[UCAG](.{3})"):
+                        print('A trinca é uma prolina')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"AC[UCAG](.{3})"):
+                        print('A trinca é uma treonina')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"GC[UCAG](.{3})"):
+                        print('A trinca é uma alanina')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"UA[UC](.{3})"):
+                        print('A trinca é uma cisteina')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"UA[AG](.{3})"):
+                        print('Códon de parada')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"CA[UC](.{3})"):
+                        print('A trinca é uma histidina')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"CA[AG](.{3})"):
+                        print('A trinca é uma glutamina')
+                        trinca = trinca + 3
+                        count = trinca
+                        elif new_seq4 == re.search(r"AA[UC](.{3})"):
+                        print('A trinca é uma asparagina')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"AA[GA](.{3})"):
+                        print('A trinca é uma lisina')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"GA[UC](.{3})"):
+                        print('A trinca é um ácido aspartico')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"GA[AG](.{3})"):
+                        print('A trinca é um ácido glutamico')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"UG[UC](.{3})"):
+                        print('A trinca é uma cisteína')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"UGA(.{3})"):
+                        print('Codon de parada')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"UGG(.{3})"):
+                        print('A trinca é um triptofano')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"CG[UCAG](.{3})"):
+                        print('A trinca é uma arginina')
+                        trinca = trinca + 3
+                        count = trinca
+                        elif new_seq4 == re.search(r"AG[UC](.{3})"):
+                        print('A trinca é uma serina')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"AG[AG](.{3})"):
+                        print('A trinca é uma arginina')
+                        trinca = trinca + 3
+                        count = trinca
+                elif new_seq4 == re.search(r"GG[UCAG](.{3})"):
+                        print('A trinca é uma glicina')
+                        trinca = trinca + 3
+                        count = trinca
+                else:
+                        print('A trinca não possui aminoácido')
+                        trinca = trinca + 3
+                        count = trinca
+pept_seq4 = new_seq4.re.search
+print(pept_seq4)
